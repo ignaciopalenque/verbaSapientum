@@ -104,7 +104,8 @@ async function login(event) {
         />
       </div>
 
-      <div class="inline-flex gap-2 items-center text-[#A15A3E]">
+    
+      {/*       <div class="inline-flex gap-2 items-center text-[#A15A3E]">
         <input
           type="checkbox"
           name=""
@@ -117,6 +118,10 @@ async function login(event) {
           <span class="font-semibold">Term ; Policy</span>
         </p>
       </div>
+  */}
+
+
+
 
       <div class="inline-flex gap-5">
         <button

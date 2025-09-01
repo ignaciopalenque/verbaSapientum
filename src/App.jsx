@@ -21,7 +21,7 @@ function App() {
     <Title />
     
     {formularioActual === 'login' && <Login cambiarAregistro={verRegistro} cambiarAprincipal={verPrincipal} />}
-    {formularioActual === 'register' && <Registro cambiarAlogin={verLogin} />}
+    {formularioActual === 'register' && <Registro cambiarAlogin={verLogin} cambiarAprincipal={verPrincipal} />}
     {formularioActual === 'principal' && <Principal />}
 
     </>

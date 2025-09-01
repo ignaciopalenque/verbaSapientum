@@ -1,17 +1,64 @@
 import React from 'react'
 import RegistroCita from './RegistroCita'
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import BtnMenu from '../components/Buttons/BtnMenu';  
+import Cita from '../pages/Cita';
 export default function Principal() {
 
 
   //estados del formulario
   const [formularioActual, setformularioActual] = useState('principal');
-  const nuevaCita = () => setformularioActual('nuevaCita');
 
+  const [citaAleatoria, setCitaAleatoria] = useState({});
+  const nuevaCita = () => setformularioActual('nuevaCita');
+  const volverAprincpal = () => setformularioActual('principal');
+  const token = localStorage.getItem("token");
+  const backEnd = import.meta.env.VITE_BACKEND_URL
+
+
+  function logout() {
+    localStorage.removeItem("token");
+    window.location.href = "/";
+  }
+
+  useEffect( () => {
+      const obtenerCitaAleatoria = async () => {
+       try {
+        const response = await fetch(backEnd + "/word/aleatoria", {
+            
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            },
+            
+
+        });
+
+        if (!response.ok) {
+        console.log(response)
+        throw new Error("Error en el registro de usuario");
+        }
+
+        const data = await response.json();
+        setCitaAleatoria(data);
+        console.log(data);
+        
+
+    } catch (error) {
+        console.error("Error:", error);
+    }
+    }
+
+  obtenerCitaAleatoria();
+  }
+  
+,[] )
 
   return (
     <>
+
+{formularioActual === 'principal' && (
 
 <div class="flex justify-center">
   <div
@@ -41,18 +88,24 @@ export default function Principal() {
 
     <BtnMenu  texto="Registrar cita celebre" onClick={nuevaCita} />
     <BtnMenu  texto="Mostar todas las citas" onClick={nuevaCita} />
-    <BtnMenu  texto="Cerrar sesion" onClick={nuevaCita} />
+    <BtnMenu  texto="Cerrar sesion" onClick={logout} />
 
-  </div>  
-</div>
-
-
-
-
+  </div> 
+     <Cita cita={citaAleatoria} />
 
 </div>
 
 
+
+
+
+</div>
+
+)}
+
+{formularioActual === 'nuevaCita' && (
+<RegistroCita cambiarAprincipal={volverAprincpal} />
+)}
     </>
 )
 }
