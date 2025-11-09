@@ -4,7 +4,6 @@ export default function Table({citas}) {
 
       useEffect( () => {
 
-            console.log(citas)
             citas.forEach(cita => {
             const row = document.createElement('tr');
             row.innerHTML = `
@@ -22,9 +21,11 @@ export default function Table({citas}) {
 
 
   return (
-    <article>
+    <article className='max-h-[600px] overflow-y-auto border border-gray-300 rounded-lg'>
 
-    <table id="tabla-citas" className='table-auto w-full text-left border border-gray-300'>
+    <h3>Total citas: {citas.length}</h3>
+
+    <table id="tabla-citas" className='table-auto w-full text-left border border-gray-300 '>
         <thead>
             <tr>
             <th className='px-4 py-2 border'>Título</th>

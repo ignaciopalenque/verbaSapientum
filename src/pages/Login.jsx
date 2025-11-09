@@ -49,6 +49,7 @@ async function login(event) {
         verError()
         throw new Error("Error en la autenticación");
         }
+        
 
         const usuario = await response.json();
 

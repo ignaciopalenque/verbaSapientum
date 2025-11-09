@@ -31,7 +31,6 @@ const confirmacionNuevaCita = () => setformularioActual('ok');
 
 
 
-
     try {
         const response = await fetch(backEnd + "/word/registro", {
             

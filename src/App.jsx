@@ -16,13 +16,19 @@ function App() {
     const verPrincipal = () => setformularioActual('principal');
   return (
     <>
-    <VideoBackground />
+    <div className='h-full w-fulloverflow-hidden'>
+    <VideoBackground/>
     <Navbar />
     <Title />
-    
-    {formularioActual === 'login' && <Login cambiarAregistro={verRegistro} cambiarAprincipal={verPrincipal} />}
+       {formularioActual === 'login' && <Login cambiarAregistro={verRegistro} cambiarAprincipal={verPrincipal} />}
     {formularioActual === 'register' && <Registro cambiarAlogin={verLogin} cambiarAprincipal={verPrincipal} />}
     {formularioActual === 'principal' && <Principal />}
+    </div>
+
+ 
+    
+   
+
 
     </>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import BtnMenu from '../components/Buttons/BtnMenu';  
 import Table from '../components/Table/Table'
 export default function CargaCIta({cambiarAprincipal, citas}) {
   console.log("El objeto citas es "+citas)
@@ -10,9 +11,15 @@ export default function CargaCIta({cambiarAprincipal, citas}) {
 >
     
 
+    <div class="inline-flex gap-5">
 
+    <BtnMenu  texto="Volver al menu principal" onClick={cambiarAprincipal} />
+  
+
+    </div> 
   <div class="capitalize  ">
     <p class="text-2xl text-[#7F3D27] text-shadow-sm text-shadow-white pb-5">Listado de citas existentes</p>
+
     <div  class="flex flex-col gap-3">
 
 
