@@ -3,18 +3,49 @@ import RegistroCita from './RegistroCita'
 import { useState, useEffect} from 'react';
 import BtnMenu from '../components/Buttons/BtnMenu';  
 import Cita from '../pages/Cita';
+import ListadoCitas from './CargaCita'
 export default function Principal() {
 
 
   //estados del formulario
   const [formularioActual, setformularioActual] = useState('principal');
-
+  const [citas, setCitas] = useState([]);
   const [citaAleatoria, setCitaAleatoria] = useState({});
   const nuevaCita = () => setformularioActual('nuevaCita');
   const volverAprincpal = () => setformularioActual('principal');
   const token = localStorage.getItem("token");
   const backEnd = import.meta.env.VITE_BACKEND_URL
 
+  const cargarCitas = () => {
+
+    const cargarListadoCitas = async () => {
+      try {
+        
+        const response = await fetch(backEnd + "/word/citas", {
+            
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            },
+            
+        });
+        if (!response.ok) {
+        throw new Error("Error en el registro de usuario");
+        
+        }
+        const data = await response.json();
+        console.log(data);
+        setCitas(data.listCitas);
+        setformularioActual('cargarCitas')
+      } catch (error) {
+        
+      }
+
+      
+    }
+    cargarListadoCitas();
+};
 
   function logout() {
     localStorage.removeItem("token");
@@ -58,6 +89,7 @@ export default function Principal() {
   return (
     <>
 
+
 {formularioActual === 'principal' && (
 
 <div class="flex justify-center">
@@ -87,7 +119,7 @@ export default function Principal() {
   <div class="inline-flex gap-5">
 
     <BtnMenu  texto="Registrar cita celebre" onClick={nuevaCita} />
-    <BtnMenu  texto="Mostar todas las citas" onClick={nuevaCita} />
+    <BtnMenu  texto="Mostar todas las citas" onClick={cargarCitas} />
     <BtnMenu  texto="Cerrar sesion" onClick={logout} />
 
   </div> 
@@ -101,6 +133,10 @@ export default function Principal() {
 
 </div>
 
+)}
+
+{formularioActual === 'cargarCitas' && (
+<ListadoCitas cambiarAprincipal={volverAprincpal} citas={citas} />
 )}
 
 {formularioActual === 'nuevaCita' && (
