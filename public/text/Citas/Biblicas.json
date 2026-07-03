@@ -1,0 +1,17 @@
+{
+    "categoria":"Biblica",
+    "citas":[
+        {   
+            "titulo":"Ezequiel 25-17",
+            "cita":"El camino del hombre recto está por todos lados rodeado por las injusticias de los egoístas y la tiranía de los hombres malos. Bendito sea aquel pastor que en nombre de la caridad y de la buena voluntad saque a los débiles del Valle de la Oscuridad porque es el auténtico guardián de su hermano y el descubridor de los niños perdidos. Y os aseguro que vendré a castigar con gran venganza y furiosa cólera a aquellos que pretendan envenenar y destruir a mis hermanos, ¡y tú sabrás que mi nombre es YAHVÉ cuando caiga mi venganza sobre ti!",
+            "descripcion":"Versiculo biblico",
+            "autor":"Ezequiel"
+        },
+        {
+            "titulo":"Romanos 12:2",
+            "cita":"No os conforméis a este siglo, sino transformaros por medio de la renovación de vuestro entendimiento, para que comprobéis cuál sea la buena voluntad de Dios, agradable y perfecta",
+            "descripcion":"Versiculo biblico",
+            "autor":"Romanos"
+        }
+    ]
+}

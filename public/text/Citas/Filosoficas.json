@@ -1,0 +1,64 @@
+{
+    "categoria":"Filosofica",
+    "citas":[
+        {
+            "titulo":"Platón habla sobre el hombre sabio",
+            "cita":"El hombre sabio se contenta con poco, porque sabe que lo poco es suficiente",
+            "descripcion":"Con esta cita Platón intenta transmitir la idea de que contentarse con poco representa el rechazo al exceso y la avaricia. Para Platón, la búsqueda desenfrenada de riquezas, placeres y posesiones es una ilusión que nos aleja de la verdadera felicidad",
+            "autor":"Platón"
+        },
+        {
+            "titulo":"Diógenes de Sinope idea del cinismo sobre el rechazo de las necesidades artificiales",
+            "cita":"Es privilegio de los dioses no querer nada, y de los hombres divinos querer poco",
+            "descripcion":"Para Diógenes esta idea expresa la esencia del cinismo, es decir, buscaba la libertad a través del rechazo radical de todas las necesidades artificiales que la sociedad había impuesto.",
+            "autor":"Diógenes de Sinope"
+        },
+        {
+            "titulo":"Séneca la métafora del barco sin rumbo",
+            "cita":"Ningún viento es favorable para el barco que no sabe a donde va",
+            "descripcion":"Para Séneca la imagen del barco es magistral porque representa la vida humana: ambos viajan a través de un medio incierto, ambos enfrentan fuerzas externas impredecibles, y ambos necesitan dirección para llegar a algún lugar significativo.",
+            "autor":"Séneca"
+        }
+        ,
+        {
+            "titulo":"Nietzsche, estética como base de la moral",
+            "cita":"Si matas una cucaracha eres un héroe. Si matas una hermosa mariposa, eres malo. La moral tiene criterios estéticos",
+            "descripcion":"Para Nietzsche todas estas reacciones revelan que nuestros juicios morales están contaminados por criterios estéticos, no por principios éticos puros.",
+            "autor":"Friedrich Nietzsche"
+        },
+
+        {
+            "titulo":"Maquiavelo, entender el problema y escoger el menor daño",
+            "cita":"La sabiduría consiste en saber distinguir la naturaleza del problema y en elegir el mal menor.",
+            "descripcion":"Maquiavelo propone una inteligencia práctica que combina diagnóstico y cálculo. Primero, distinguir el problema real (sus causas y su dinámica). Segundo, escoger la opción menos destructiva entre las disponibles, porque lo peor no es hacer el mal, sino tomar decisiones que agravan el desastre por querer evitar cualquier costo.",
+            "autor":"Nicolás Maquiavelo"
+        },
+
+        {
+            "titulo":"Platón, y la necesidad de verbalizar el amor",
+            "cita":"La mayor declaración de amor es la que no se hace; el hombre que siente mucho, habla poco.",
+            "descripcion":"Con esta cita Platón expresa una idea muy presente en la literatura y la filosofía: el amor más profundo no siempre necesita ser verbalizado.",
+            "autor":"Platón"
+        },
+         {
+            "titulo":"Charles Bukowski, lógica circular: no importa el resultado, siempre hay un motivo para beber.",
+            "cita":"Cuando ocurre algo malo, bebes para olvidarlo; si ocurre algo bueno, bebes para celebrarlo; y si no pasa nada, también bebes para que pase algo.",
+            "descripcion":"Con esta cita Bukowski escribía desde la experiencia vivida, ya que, pasó gran parte de su vida lidiando con el alcohol, trabajos precarios y una existencia marginal. La observación es típicamente bukowskiana: amarga, irónica, pero profundamente verdadera.",
+            "autor":" Charles Bukowski"
+        },
+
+        {
+            "titulo":"Charles Bukowski, la locura no como una enfermedad sino como una prueba de autenticidad",
+            "cita":"Algunas personas no enloquecen nunca. Qué vida tan horrible deben tener.",
+            "descripcion":"Con esta cita Bukowski invierte la lógica convencional. Normalmente consideramos que enloquecer es algo negativo, pero aquí sugiere que no enloquecer nunca podría ser peor",
+            "autor":" Charles Bukowski"
+        },
+
+        {
+            "titulo":"Charles Bukowski, Cualquier elección tiene un precio devastador",
+            "cita":"Algunos pierden la mente y se vuelven alma, locos. Algunos pierden el alma y se convierten en mente, intelectuales. Algunos pierden ambos y son aceptados.",
+            "descripcion":"Lo inteligente de esta cita es que Bukowski no presenta ninguna opción como correcta. Todos pierden algo, no hay escapatoria. Es una visión pesimista pero honesta sobre las opciones que tiene un ser humano en esta sociedad.",
+            "autor":" Charles Bukowski"
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 import React from 'react'
-import sound1 from '../../assets/audio/sound1.webm'
-import sound2 from '../../assets/audio/sound2.webm'
+import sound1 from '../../assets/audio/sound1.mp3'
+import sound2 from '../../assets/audio/sound2.mp3'
 import sound3 from '../../assets/audio/sound3.webm'
 import sound4 from '../../assets/audio/sound4.webm'
 import sound5 from '../../assets/audio/sound5.webm'
@@ -75,12 +75,12 @@ function stopAudio() {
 
         switch (sonido){
             case 1:
-                sonando.innerHTML = "Esta escuchando la pieza 1 de 12 :  Umutsuz Aşk del autor Turco Bagjan Oktyabr "
+                sonando.innerHTML = "Esta escuchando la pieza 1 de 12 :  Nothing can be explained (piano cover) "
                 musica.src = sound1
                 musica.play();
             break;
             case 2:
-                sonando.innerHTML = "Esta escuchando la pieza 2 de 12 :  Sherlock - Irene Adler's Theme - Cover Piano  "
+                sonando.innerHTML = "Esta escuchando la pieza 2 de 12 :  Old Doll - mad father (Piano)  "
                 musica.src = sound2
                 musica.play();
             break;
@@ -149,7 +149,7 @@ function stopAudio() {
             break;
 
             default:
-                sonando.innerHTML = "Esta escuchando la pieza 1 de 12 :  Umutsuz Aşk del autor Turco Bagjan Oktyabr "
+                sonando.innerHTML = "Esta escuchando la pieza 1 de 12 :  Nothing can be explained (piano cover)"
                 musica.src = sound1
                 musica.play();
             break;
@@ -186,18 +186,18 @@ function stopAudio() {
   return (
    <SectionStyled>
 
-    <div className='absolute top-0 left-0 w-full h-8 flex items-start border-b-1 border-[#777777] '>
+    <div className='fixed top-0 left-0 w-full h-16 lg:h-10 xl:h-10 md:h-16 sm:h-16  items-start border-b-1 border-[#777777] '>
     
 
     
 
-        <p id="sonando" className='text-[#ffffff] text-shadow-sm text-shadow-black text-center font-semibold text-sm p-2 animate-pulse'>Esta escuchando la pieza 1 de 12 :  Umutsuz Aşk del autor Turco Bagjan Oktyabr</p>
+        <p id="sonando" className='text-[#ffffff] text-shadow-sm text-shadow-black text-center font-semibold text-sm p-2 animate-pulse '>Esta escuchando la pieza 1 de 12 :  Umutsuz Aşk del autor Turco Bagjan Oktyabr</p>
         <audio id="musica" src={sound1}  loop></audio>
     </div>
 
-    <div className='absolute top-0 right-2 w-min  h-8 flex items-end border-b-1 border-[#777777] p-1'>
+    <div className='absolute top-8 right-2 w-min  h-8 flex lg:top-0 lg:m-1 lg:p-1 xl:m-1 xl:p-1 xl:top-0 md:top-8 sm:top-8  items-end p-1'>
 
-    <button id="play" className='p-1 mr-0.5 bg-transparent hover:shadow-sm hover:shadow-amber-800' style={{
+    <button id="play" className='p-1 mr-0.5 bg-transparent hover:shadow-sm hover:shadow-white' style={{
       width: '25px',
       height: '25px',
       padding: 0,
@@ -215,7 +215,7 @@ function stopAudio() {
 
     </button>
     
-    <button id="pause" className='p-1 mr-0.5 bg-transparent hover:shadow-sm hover:shadow-amber-800' style={{
+    <button id="pause" className='p-1 mr-0.5 bg-transparent hover:shadow-sm hover:shadow-white' style={{
       width: '25px',
       height: '25px',
       padding: 0,
@@ -233,7 +233,7 @@ function stopAudio() {
     </button>
 
 
-    <button id="prev" className='p-1 mr-0.5 bg-transparent hover:shadow-sm hover:shadow-amber-800' style={{
+    <button id="prev" className='p-1 mr-0.5 bg-transparent hover:shadow-sm hover:shadow-white' style={{
       width: '25px',
       height: '25px',
       padding: 0,
@@ -250,7 +250,7 @@ function stopAudio() {
       />
     </button>
 
-    <button id="next" className='p-1 mr-0.5 bg-transparent hover:shadow-sm hover:shadow-amber-800' style={{
+    <button id="next" className='p-1 mr-0.5 bg-transparent hover:shadow-sm hover:shadow-white' style={{
       width: '25px',
       height: '25px',
       padding: 0,
@@ -268,7 +268,7 @@ function stopAudio() {
     </button>
 
 
-    <button id="stop" className='p-1 bg-transparent hover:shadow-sm hover:shadow-amber-800' style={{
+    <button id="stop" className='p-1 bg-transparent hover:shadow-sm hover:shadow-white' style={{
       width: '25px',
       height: '25px',
       padding: 0,

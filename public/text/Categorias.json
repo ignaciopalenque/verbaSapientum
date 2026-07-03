@@ -1,0 +1,21 @@
+
+{
+  "categorias": [
+    {
+      "nombre": "Todas",
+      "descripcion": "Todas las citas almacenadas"
+    },
+    {
+      "nombre": "Biblicas",
+      "descripcion": "Categoria de citas o versiculos mencionados en la Biblia"
+    },
+    {
+      "nombre": "Filosoficas",
+      "descripcion": "Categoria de citas y pensamientos Filosoficos de distintos autores"
+    },
+    {
+      "nombre": "Proverbios",
+      "descripcion": "Categoria de proverbios de distintos autores"
+    }
+  ]
+}

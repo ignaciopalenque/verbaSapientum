@@ -1,0 +1,32 @@
+{
+    "categoria":"Proverbios",
+    "citas":[
+        {
+            "titulo":"Proverbio Sioux, Al enemigo...",
+            "cita":"Que mis enemigos sean fuertes y bravos, para que yo no sienta remordimiento al derrotarlos",
+            "descripcion":"Proverbio Sioux",
+            "autor":"Proverbio Sioux"
+        },
+        {
+            "titulo":"Proverbio Popular Español, Agua que no has de beber...",
+            "cita":"Agua que no has de beber, déjala correr",
+            "descripcion":"Este probervio se refiere a que si no se va a aprovechar algo, mejor no usarlo. Usado sobre todo para evitar comprar cosas inecesariamente.",
+            "autor":"Proverbio Popular Español"
+        },
+        {
+            "titulo":"Proverbio Popular Español, Haciendo y deshaciendo...",
+            "cita":"Haciendo y deshaciendo se va aprendiendo",
+            "descripcion":"Este probervio se refiere a que a lo largo del aprendizaje, se van aprendiendo cosas nuevas, pero también se reaprende lo aprendido y se comprende, cuando uno se equivoca, por qué se ha equivocado y cómo solucionarlo. Volviéndolo a hacer aprenderá a hacerlo bien.",
+            "autor":"Proverbio Popular Español"
+        },
+        
+        {
+            "titulo":"Proverbio Popular Español, Quien no conoce a Dios...",
+            "cita":"Quien no conoce a Dios a cualquier santo le reza",
+            "descripcion":"Este probervio describe que cuando una persona no conoce la verdad, carece de experiencia o no tiene un buen criterio, puede confiar en cualquiera o aceptar cualquier cosa como válida.",
+            "autor":"Proverbio Popular Español"
+        }
+        
+        
+    ]
+}

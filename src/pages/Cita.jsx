@@ -2,101 +2,137 @@ import React from 'react'
 
 export default function Cita({cita}) {
   return (
-  <>
+    <>
+      <div className="flex justify-center items-center p-8  opacity-80  ">
+        {/* Contenedor con efecto de pergamino */}
+        <div className="relative  ">
+          
+          {/* Efecto de enrollo superior */}
+          <div className="absolute  left-0 right-0 h-4 bg-gradient-to-b from-[#8B6F47] via-[#A0826D] to-transparent rounded-full blur-md opacity-60"></div>
+          
+          {/* Pergamino principal */}
+          <div className="bg-gradient-to-b from-[#F5E6D3] via-[#EAD7C3] to-[#E5D1BF] 
+                          rounded-lg shadow-2xl overflow-hidden
+                          border-2 border-[#8B6F47]
+                          px-20 py-2
+                          animate-fadeInDeploy
+                          backdrop-blur-sm
+                          before:absolute before:inset-0 before:bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%23000%22 opacity=%220.02%22 width=%22100%22 height=%22100%22/></svg>')] before:pointer-events-none">
+            
+            {/* Decoración superior */}
+            <div className="flex justify-center mb-1">
+              <div className="text-4xl text-[#8B6F47] opacity-40">✦ ✦ ✦</div>
+            </div>
 
-  <div class="flex justify-center">
-<div
-  class="form w-[1000px] opacity-90 rounded-md  overflow-hidden z-[100]  cursor-pointer snap-start shrink-0 py-5 px-6 bg-[#DFA16A] r flex flex-col items-center justify-center gap-3 transition-all duration-300"
->
-    
+         
+              <div className="space-y-0.5 relative z-10 py-2 px-2">
+                
+                {/* Título */}
+                <div className="flex flex-col items-center text-center">
+                  <label className="text-xs uppercase tracking-widest text-[#8B6F47] font-semibold mb-2 opacity-70">
+                    Cita Célebre
+                  </label>
+                  <input
+                    type="text"
+                    value={cita.titulo + ' 📜'} 
+                    disabled
+                    className="w-full text-3xl font-serif text-[#5A4A3A] 
+                              bg-transparent border-none outline-none text-center
+                              placeholder:text-[#A89968] font-bold
+                              italic truncate"
+                    style={{fontSize: 'clamp(1.2rem, 2.5vw, 1.8rem)'}}
+                  />
+                </div>
 
+                {/* Línea decorativa */}
+                <div className="flex justify-center gap-2">
+                  <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#8B6F47] to-transparent"></div>
+                  <span className="text-[#8B6F47] opacity-50">❖</span>
+                  <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#8B6F47] to-transparent"></div>
+                </div>
 
-  <div class="capitalize  ">
-    <p class="text-2xl text-[#7F3D27] text-shadow-sm text-shadow-white pb-5">Cita Aleatoria :</p>
-    <form action="" class="flex flex-col gap-3">
+                {/* Cita principal */}
+                <div className="flex flex-col items-center text-center">
+                  <textarea
+                    value={cita.cita}
+                    disabled
+                    className="w-full text-lg font-serif text-[#6B5B4B] font-semibold
+                              bg-transparent border-none outline-none text-center
+                              placeholder:text-[#A89968] leading-relaxed
+                              resize-none min-w-[280px] min-h-[160px]"
+                    rows="7"
+                    cols="70"
+                  />
+                </div>
 
-        <div class="flex flex-col items-start w-full">
-        <label for="titulo" class="text-sm text-[#7F3D27] font-semibold "
-          >Título</label
-        >
+                {/* Línea decorativa */}
+                <div className="flex justify-center">
+                  <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#8B6F47] to-transparent"></div>
+                </div>
 
-        {cita?.cita?.length > 0 && (
-        <input
-          id="titulo"
-          type="text"
-          value={cita.cita[0].titulo}
-          disabled
-          class="w-full py-px pl-0 bg-transparent outline-none focus:ring-0
-           border-0 border-b-2 border-[#7F3D27] placeholder:text-[#A15A3E] 
-           focus:outline-none text-[#7F3D27] placeholder:text-xs
-           text-shadow-sm"
-        />        )}
+                {/* Autor */}
+                <div className="flex flex-col items-center">
+                  <label className="text-xs uppercase tracking-widest text-[#8B6F47] font-semibold mb-1 opacity-70">
+                    Autor
+                  </label>
+                  <input
+                    type="text"
+                    value={cita.autor}
+                    disabled
+                    className="text-lg font-serif text-[#7A6A5A] 
+                              bg-transparent border-none outline-none text-center
+                              placeholder:text-[#A89968] italic"
+                  />
+                </div>
 
-      </div> 
+                {/* Descripción */}
+                <div className="flex flex-col items-center pt-4 border-t-2 border-[#8B6F47] border-opacity-20">
+                  <textarea
+                    value={cita.descripcion}
+                    disabled
+                    className="w-full text-md font-semibold font-serif text-[#6B5B4B] 
+                              bg-transparent border-none outline-none text-center
+                              placeholder:text-[#A89968] leading-relaxed
+                              resize-none opacity-80"
+                    rows="3"
+                  />
+                </div>
 
-      <div class="flex flex-col items-start w-full">
-        <label for="autor" class="text-sm text-[#7F3D27] font-semibold "
-          >Autor</label
-        >
+              </div>
+            
 
-        {cita?.cita?.length > 0 && (
-        <input
-          id="autor"
-          type="text"
-          value={cita.cita[0].autor}
-          disabled
-          class="w-full py-px pl-0 bg-transparent outline-none focus:ring-0 border-0 border-b-2
-           border-[#7F3D27] placeholder:text-[#A15A3E] 
-           focus:outline-none text-[#7F3D27] placeholder:text-xs "
-        />        )}
+            {/* Decoración inferior */}
+            <div className="flex justify-center mt-1">
+              <div className="text-4xl text-[#8B6F47] opacity-40">✦ ✦ ✦</div>
+            </div>
 
+            {/* Efecto de enrollo inferior */}
+            <div className="absolute -bottom-4 left-0 right-0 h-4 bg-gradient-to-t from-[#8B6F47] via-[#A0826D] to-transparent rounded-full blur-md opacity-60"></div>
+          </div>
+        </div>
       </div>
 
-  
-      <div class="flex flex-col items-start w-full">
-        <label for="cita" class="text-sm text-[#7F3D27] font-semibold"
-          >Cita</label>
+      <style jsx>{`
+        @keyframes fadeInDeploy {
+          from {
+            opacity: 0;
+            transform: scaleY(0) rotateX(-10deg);
+          }
+          to {
+            opacity: 1;
+            transform: scaleY(1) rotateX(0deg);
+          }
+        }
 
-        {cita?.cita?.length > 0 && (
+        @keyframes scrollParch {
+          0% { background-position: 0 0; }
+          100% { background-position: 100px 100px; }
+        }
 
-          <textarea
-          cols={"500"}
-          type="text"
-          value={cita.cita[0].cita}
-          disabled
-          class="w-full py-px pl-0 bg-transparent outline-none focus:ring-0 border-0 border-b-2
-           border-[#7F3D27] placeholder:text-[#A15A3E] focus:outline-none text-[#7F3D27] placeholder:text-xs"
-          />
-          )}
-    
-      </div>
-
-      <div class="flex flex-col items-start w-full">
-        <label for="descripción" class="text-sm text-[#7F3D27] font-semibold"
-          >Descripción</label
-        >
-
-        {cita?.cita?.length > 0 && (
-
-          <textarea
-          cols={"500"}
-          type="text"
-          value={cita.cita[0].descripcion}
-          disabled
-          class="w-full py-px pl-0 bg-transparent outline-none focus:ring-0 border-0 border-b-2 border-[#7F3D27] placeholder:text-[#A15A3E] focus:outline-none text-[#7F3D27] placeholder:text-xs"
-          />
-          )}
-
-      </div>
-
-
-    </form>
-  </div>
-</div>
-
-
-</div>
-
-  </>
+        .animate-fadeInDeploy {
+          animation: fadeInDeploy 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+      `}</style>
+    </>
   )
 }
