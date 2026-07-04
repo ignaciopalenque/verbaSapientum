@@ -40,7 +40,7 @@ export default function Cita({cita}) {
                     className="w-full text-3xl font-serif text-[#5A4A3A] 
                               bg-transparent border-none outline-none text-center
                               placeholder:text-[#A89968] font-bold
-                              italic"
+                              italic truncate"
                   />
                 </div>
 

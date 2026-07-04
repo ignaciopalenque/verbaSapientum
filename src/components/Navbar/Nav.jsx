@@ -31,7 +31,7 @@ const SectionStyled = styled.section`
       transform: translateX(-100%);
     }
     100% {
-      transform: translateX(100%);
+    transform: translateX(65vw); 
     }
   }
 `;
@@ -75,12 +75,12 @@ function stopAudio() {
 
         switch (sonido){
             case 1:
-                sonando.innerHTML = "Esta escuchando la pieza 1 de 12 :  Nothing can be explained (piano cover) "
+                sonando.innerHTML = "Esta escuchando la pieza 1 de 12 :  Nothing can be explained Piano "
                 musica.src = sound1
                 musica.play();
             break;
             case 2:
-                sonando.innerHTML = "Esta escuchando la pieza 2 de 12 :  Old Doll - mad father (Piano)  "
+                sonando.innerHTML = "Esta escuchando la pieza 2 de 12 :  Old Doll - mad father Piano  "
                 musica.src = sound2
                 musica.play();
             break;
@@ -191,7 +191,7 @@ function stopAudio() {
 
     
 
-        <p id="sonando" className='text-[#ffffff] text-shadow-sm text-shadow-black text-center font-semibold text-sm p-2 animate-pulse '>Esta escuchando la pieza 1 de 12 :  Umutsuz Aşk del autor Turco Bagjan Oktyabr</p>
+        <p id="sonando" className='text-[#ffffff] text-shadow-sm text-shadow-black text-center font-semibold text-sm p-2 animate-pulse '>Esta escuchando la pieza 1 de 12 : Nothing can be explained Piano</p>
         <audio id="musica" src={sound1}  loop></audio>
     </div>
 
